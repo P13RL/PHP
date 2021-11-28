@@ -13,6 +13,7 @@ if(isset($_GET['elimina'])){
 }
 //includo l'header
 include 'header.php';
+echo "ciao";
 
 ?>
 <div class="container pt-3">
