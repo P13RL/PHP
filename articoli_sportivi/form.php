@@ -5,7 +5,6 @@ if(isset($_POST['submit'])){
     $gestione->add($_POST);
 }
 ?>
-<!--prova!-->
 <!-- start html !-->
 <?php include 'header.php';?>
 <!-- inserimento articolo !-->
