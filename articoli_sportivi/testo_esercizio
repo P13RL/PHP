@@ -1,0 +1,9 @@
+Un negozio di articoli sportivi ha bisogno di un sistema informatico per gestire il proprio magazzino.
+Oltre a permettere l'inserimento di un nuovo articolo sportivo ( nome - codice univoco - quantità - prezzo ) il sistema deve consentire,
+tramite un semplice pulsante  la rimozione di una unità dal totale (se maggiore di 0 ) altrimenti mostrare la scritta non disponibile.
+Inoltre sarà necessaria una pagina "rifornimento" dove mostrare l'elenco dei prodotti con una quantità minore di 3 in ordinati
+( sempre per quantità crescente ) modo da individuarli velocemente per i nuovi rifornimenti.
+Deve infine essere possibile eliminare un prodotto dal catalogo o modificarne esclusivamente la quantità.
+
+
+Nota per ordinare i risultati di una interrogazione al database Utilizzare ORDER BY nomecampo ASC o DESC
