@@ -11,6 +11,6 @@
         <a class="nav-link text-light" href="<?= Gestione::FORM ?>">Aggiungi articolo</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link text-light" href="#">Rifornimento </a>
+        <a class="nav-link text-light" href="<?= Gestione::RIFORNIMENTO?>">Rifornimento </a>
     </li>
 </ul>

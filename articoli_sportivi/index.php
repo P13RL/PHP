@@ -22,10 +22,10 @@ include 'header.php';
     <div class="card" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title"> <b> Nome: </b><?= $val['nomeArticolo'] ?></h5>
-            <p class="card-text"> <b>Quantità: </b></N><?= $val['quantitaArticolo'] ?> </p>
+            <p class="card-text"> <b>Quantità: </b><?= $val['quantitaArticolo'] ?> </p>
             <p class="card-text"> <b> Prezzo: </b><?= $val['prezzo'] ?> </p>
             <a href="<?= Gestione::urlModificaUnita($val['id']) ?>" class="btn btn-primary"> Rimuovi Unità</a>
-            <a href="<?= Gestione::urlEliminaArticolo($val['id']) ?>" class="btn btn-danger"> Elimina Articolo</a>
+            <a href="<?= Gestione::urlEliminaArticolo($val['id']) ?>" class="btn btn-danger mt-2"> Elimina Articolo</a>
 
         </div>
     </div>

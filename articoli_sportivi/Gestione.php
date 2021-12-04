@@ -3,11 +3,14 @@ class Gestione{
     private $db_connection;
     CONST INDEX = "index.php";
     CONST FORM = "form.php";
+    CONST RIFORNIMENTO = "rifornimento.php";
+    CONST RIFORNIMENTO_SINGOLO = "rifornisci.php";
     public function __construct(){
         $this->db_connection = new Connessione();
     }
 
     public function add($value){
+        /** @noinspection SqlNoDataSourceInspection */
         $sql = "INSERT INTO articoli_sportivi(nomeArticolo, quantitaArticolo, prezzo) 
                 VALUES('".$value['nomeArticolo']."', '".$value['quantitaArticolo']."', '".$value['prezzoArticolo']."')";
         $this->db_connection->query($sql);
@@ -38,6 +41,14 @@ class Gestione{
         echo "<div class='bg-danger text-center text-white'> Prodotto eliminato correttamente! </div>";
     }
 
+    public function getArticolo($id){
+        $sql = "SELECT * FROM articoli_sportivi WHERE id='$id'";
+        return $this->db_connection->query($sql);
+    }
+    public function updateArticolo($value){
+        $sql = "UPDATE articoli_sportivi SET quantitaArticolo = '".$value['quantitaArticolo']."'";
+        $this->db_connection->query($sql);
+    }
     //metodi statici
 
     public static function urlIndex(){
@@ -54,5 +65,9 @@ class Gestione{
 
     public static function urlEliminaArticolo($id){
         return self::INDEX."?elimina=".$id;
+    }
+
+    public static function urlRifornisci($id){
+        return self::RIFORNIMENTO_SINGOLO."?rifornimento=".$id;
     }
 }
